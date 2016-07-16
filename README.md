@@ -7,10 +7,13 @@ This application is the Basic + the Manager application. Formatted exactly like 
 **FUNCTIONALITY**  
 
 The customer app works exactly as described in the original instructions. On load, it'll load the table and display all items for sale and the coresponding data for each item. If the table looks odd, try expanding the terminal window a little bit. You'll be prompted for item number and desired quantity.
+![alt tag](image1.png)
 
 The Manager app is a little different. Like the customer app, it lists all items on load. So there's no command offered to list all items for sale. Likewise, inventory numbers are listed, so there is no "view low inventory" function. Had the database been 20+ items I would have added it.
 
 The options within the Manager app are Restock Inventory, Add New Inventory, and Remove an Existing Product. (The remove product is a bonus feature I added.)
+![alt tag](image2.png)
+
 
 **NOTES** 
 
