@@ -1,10 +1,10 @@
-**bold**  OVERVIEW  __bold__
+**OVERVIEW** 
 
 This application is formatted to take a Database identical to the original instructions. It takes a database named Bamazon, a table named Products, and the columns of ItemID, ProductName, DepartmentName, Price, and StockQuantity.
 
 This application is the Basic + the Manager application. Formatted exactly like the original file names of BamazonCustomer.js and BamazonManager.js
 
-**bold**  FUNCTIONALITY  __bold__
+**FUNCTIONALITY **  
 
 The customer app works exactly as described in the original instructions. On load, it'll load the table and display all items for sale and the coresponding data for each item. If the table looks odd, try expanding the terminal window a little bit. You'll be prompted for item number and desired quantity.
 
@@ -12,7 +12,7 @@ The Manager app is a little different. Like the customer app, it lists all items
 
 The options within the Manager app are Restock Inventory, Add New Inventory, and Remove an Existing Product. (The remove product is a bonus feature I added.)
 
-**bold**  NOTES  __bold__
+**NOTES** 
 
 Again, being that this file is formatted exactly like the instructions. You should be able to plug in any database named Bamazon ,that has a table named Products, that has columns matching the original specs.
 
