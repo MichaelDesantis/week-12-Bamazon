@@ -4,7 +4,7 @@ This application is formatted to take a Database identical to the original instr
 
 This application is the Basic + the Manager application. Formatted exactly like the original file names of BamazonCustomer.js and BamazonManager.js
 
-**FUNCTIONALITY **  
+**FUNCTIONALITY**  
 
 The customer app works exactly as described in the original instructions. On load, it'll load the table and display all items for sale and the coresponding data for each item. If the table looks odd, try expanding the terminal window a little bit. You'll be prompted for item number and desired quantity.
 
