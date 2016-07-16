@@ -38,12 +38,14 @@ function displayAll() {
 }; //end displayAll
 
 function inquireForUpdates() {
+    //inquire for input
     inquirer.prompt([{
         name: "action",
         type: "list",
         message: "Choose an option below to manage your store:",
         choices: ["Restock Inventory", "Add New Product", "Remove An Existing Product"]
     }]).then(function(answers) {
+        //select user response, launch corresponding function
         switch (answers.action) {
 
             case 'Restock Inventory':
@@ -55,7 +57,6 @@ function inquireForUpdates() {
                 break;
 
             case 'Remove An Existing Product':
-                console.log("removing");
                 removeRequest();
                 break;
         }
@@ -63,6 +64,7 @@ function inquireForUpdates() {
 }; //end inquireForUpdates
 
 function restockRequest() {
+    //gather data from user
     inquirer.prompt([
 
         {
@@ -83,10 +85,13 @@ function restockRequest() {
     });
 }; //end restockRequest
 
+//runs on user parameters from the request function
 function restockDatabase(id, quant) {
+    //update the database
     connection.query('SELECT * FROM Products WHERE ItemID = ' + id, function(error, response) {
         if (error) { console.log(error) };
         connection.query('UPDATE Products SET StockQuantity = StockQuantity + ' + quant + ' WHERE ItemID = ' + id);
+        //re-run display to show updated results
         displayAll();
     });
 }; //end restockDatabase
@@ -116,6 +121,7 @@ function addRequest() {
         },
 
     ]).then(function(answers){
+        //gather user input, store as variables, pass as parameters
     	var name = answers.Name;
     	var category = answers.Category;
     	var price = answers.Price;
@@ -125,8 +131,9 @@ function addRequest() {
 }; //end addRequest
 
 function buildNewItem(name,category,price,quantity){
-	console.log(name,category,price,quantity);
+    //query database, insert new item
 	connection.query('INSERT INTO Products (ProductName,DepartmentName,Price,StockQuantity) VALUES("' + name + '","' + category + '",' + price + ',' + quantity +  ')');
+    //display updated results
 	displayAll();
 
 };//end buildNewItem
